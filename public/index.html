@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Movie Recommender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lab 07: Movie Recommender</h1>
+        <h4>with NodeJS + ExpressJS + TMDb</h4>
+
+        <!-- Genre Dropdown -->
+        <div class="filter">
+            <label for="genre">Choose Genre:</label>
+            <select id="genre">
+                <option value="all">All</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="sci-fi">Sci-Fi</option>
+            </select>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search">
+            <label for="genre">Filter by Name:</label>
+            <input type="text" id="searchInput" placeholder="Avengers: Endgame">
+        </div>
+
+        <div>
+            <button id="getMovieButton">Get Random Movie</button>
+            <button id="searchButton">Search</button>
+        </div>
+
+        <!-- Movie Display Area -->
+        <div class="movie-display">
+            <h2>Recommended Movie</h2>
+            <table id="movieTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Poster</th>
+                        <th>Title</th>
+                        <th>Genres</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="movieTableBody">
+                    <tr>
+                        <td colspan="4">No movies loaded yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="clearButton">Clear</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
